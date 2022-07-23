@@ -1,0 +1,18 @@
+{
+  "name": "testeProjSassTypeScript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "buildSass": "node-sass -w ./app/css/style.scss ./dist/css/style.css",
+    "bundleTypeScript": "tsc -w",
+    "start": "concurrently \"npm run buildSass\" \"npm run bundleTypeScript\""
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
